@@ -1,21 +1,24 @@
 <?php
 
-//$url=;
-
+$url= $_SERVER['REQUEST_URI'];
 switch($url)
 {
-    case "/" :
+    case "/routeur_maison/" :
         require __DIR__ . '/view/accueil.php';
         break;
 
-    case "/acceuil":
+    case "/":
+        require __DIR__ .'/view/accueil.php';
+        break;
+
+    case "/routeur_maison/acceuil":
         require __DIR__ . '/view/accueil.php';
 
-    case "/blog":
+    case "/routeur_maison/blog":
         require __DIR__ . '/view/blog.php';
         break;
 
-    case "/contact":
+    case "/routeur_maison/contact":
         require __DIR__ . '/view/contact.php';
         break;
         
